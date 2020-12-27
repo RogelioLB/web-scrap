@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        async function request(){
+            const result=await fetch("/data");
+            const data=await result.json();
+            document.getElementById('title').innerHTML="<h1>LEGENDS WIKI</h1>";
+            data.leyendas.forEach((el,i)=>{
+                if(data.url[i].replace("makoa-gibraltar","gibraltar")){
+                    document.getElementById('main').innerHTML+=`<a href="https://ea.com/${data.urlCh[i]}" ><div class="image" ><h2>${el}</h2><img src=${data.url[i].replace("makoa-gibraltar","gibraltar")} /> <div><p>Percentage Of Use: ${data.usage[i]}.</p><p>KPM(Kill Rate Per Match):${data.kpm[i]} Kills.</p></div> </div></a>`;
+                    return;
+                }
+                document.getElementById('main').innerHTML+=`<a href="https://ea.com/${data.urlCh[i]}" ><div class="image" ><h2>${el}</h2><img src=${data.url[i]} /> <div><p>Percentage Of Use: ${data.usage[i]}.</p><p>KPM (Kill Rate Per Match):${data.kpm[i]} Kills.</p></div> </div></a>`;
+            })
+        }
+        request();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon">
+    <title>LEGENDS WIKI</title>
+</head>
+<body id="body">
+    <div id="title">
+
+    </div>
+    <main id="main">
+
+    </main>
+</body>
+</html>

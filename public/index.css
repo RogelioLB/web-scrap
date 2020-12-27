@@ -1,0 +1,64 @@
+a{
+    text-decoration: none;
+    color:white;
+}
+body{
+    background-color: rgb(22, 21, 21);
+    color:#fff;
+    font-family:'Bebas Neue', cursive;
+}
+#body::-webkit-scrollbar {
+    width:15px;
+}
+#body::-webkit-scrollbar-thumb {
+    background: rgb(180, 179, 179);
+    border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#body::-webkit-scrollbar-thumb:hover {
+    background: #a3a2a2;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+#body::-webkit-scrollbar-thumb:active {
+    background-color: #7a7a7a;
+}
+#body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 2px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+#body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+#main{
+    max-width: 1200px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+h1{
+    font-size:56px;
+    text-align: center;
+    margin: 15px 0px 0px 0px;
+}
+h2{
+    margin:0;
+    font-size: 34px;
+    transform: translateY(50px);
+}
+
+.image{
+    text-align: center;
+    padding:10px;
+}
+.image img{
+    width:300px;
+}
+.image:last-child{
+    margin-bottom:20px;
+}
+p{
+    font-size: 26px;
+}
