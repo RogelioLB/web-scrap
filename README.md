@@ -1,6 +1,9 @@
 # web-scrap
 
-Web-Scrappign que devuelve los datos de paginas web, es especigico datos de personajes.
+<h1>Web-Scrapping</h1>
 
+<h2>What is it?</h2>
 
-Para iniciarlos utilizamos node indexs.js.
+<p>It is a way in which you can "walk" the web to collect information or data to use / save them on your web</p>
+
+<p>In this case it gets character data and renders it on the web</p>
